@@ -5,33 +5,48 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Number conversion to a string.
+ * Number conversion to a string.<br/>
  * Created by ender on 14-3-25.
  * <p/>
- * code:
- * Num2Str ns=new Num2Str("ABC", 'D');
- * System.out.println("-25="+ns.toStr(-15));
+ * code:<br/>
+ * Num2Str ns=new Num2Str("ABC", 'D');<br/>
+ * System.out.println("-25 = " + ns.toStr(-15));<br/>
+ * for (int i = 0; i < 15; i++)<br/>
+ * &nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i + "=" + ns.toStr(i));
  * <p/>
- * out:
- * -25=DBBB
+ * out:<br/>
+ * -25 = DBBB<br/>
+ * 0=A<br/>
+ * 1=B<br/>
+ * 2=C<br/>
+ * 3=AA<br/>
+ * 4=AB<br/>
+ * 5=AC<br/>
+ * 6=BA<br/>
+ * 7=BB<br/>
+ * 8=BC<br/>
+ * 9=CA<br/>
+ * 10=CB<br/>
+ * 11=CC<br/>
+ * 12=AAA<br/>
+ * 13=AAB<br/>
+ * 14=AAC
  * <p/>
- * code:
- * Num2Str ns=new Num2Str();
- * System.out.println("-27="+ns.toStr(-15));
- * System.out.println("BXY="+ns.toInt("BXZ"));
+ * code:<br/>
+ * Num2Str ns=new Num2Str();<br/>
+ * System.out.println("-27 = " + ns.toStr(-15));<br/>
+ * System.out.println("BXY = " + ns.toInt("BXY"));
  * <p/>
- * out:
- * -27=-AB
- * BXY=2000
+ * out:<br/>
+ * -27 = -AB<br/>
+ * BXY = 2000
  */
 public class Num2Str {
     private char[] chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-
-
     private char minus = '-';
 
     /**
-     * Default display string is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+     * Default display string is "ABCDEFGHIJKLMNOPQRSTUVWXYZ".<br/>
      * minus is '-'.
      */
     public Num2Str() {
@@ -60,7 +75,7 @@ public class Num2Str {
      * String conversion to integer.
      *
      * @param str
-     * @return
+     * @return int
      * @throws CharConversionException
      */
     public int toInt(String str) throws CharConversionException {
@@ -71,7 +86,7 @@ public class Num2Str {
      * String conversion to long.
      *
      * @param str
-     * @return
+     * @return long
      * @throws CharConversionException
      */
     public long toLong(String str) throws CharConversionException {
@@ -82,7 +97,7 @@ public class Num2Str {
      * Integer converted to string.
      *
      * @param num
-     * @return
+     * @return str
      */
     public String toStr(int num) {
         return num2str(num);
@@ -92,7 +107,7 @@ public class Num2Str {
      * Long converted to string.
      *
      * @param num
-     * @return
+     * @return str
      */
     public String toStr(long num) {
         return num2str(num);
